@@ -1,0 +1,4 @@
+[26-May-2025 12:16:44 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Attempt to assign property "SMTPDebug" on null in /home/igoagritech/public_html/Igolandingpage/sendmail.php:40
+Stack trace:
+#0 {main}
+  thrown in /home/igoagritech/public_html/Igolandingpage/sendmail.php on line 40

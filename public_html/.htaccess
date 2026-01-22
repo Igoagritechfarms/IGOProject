@@ -1,0 +1,32 @@
+
+#  RewriteEngine On
+
+#  # Normalize multiple slashes to a single slash
+#  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\s([^\s]*)/{2,}([^\s]*)\s
+#  RewriteRule . %1/%2 [R=301,L]
+
+
+#  # Redirect /index.php to /
+#  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/index\.php [NC]
+#  RewriteRule ^ / [R=301,L]
+
+# # Redirect /index to /
+#  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/index(\.php)? [NC]
+#  RewriteRule ^ / [R=301,L]
+
+# # # Rewrite URLs to corresponding PHP files if the PHP file exists
+
+#  RewriteCond %{REQUEST_FILENAME} !-d
+#  RewriteCond %{REQUEST_FILENAME}\.php -f
+#  RewriteRule ^(.*)$ $1.php [L]
+
+
+#  # Redirect URLs with .php extension to the URL without .php extension
+#  RewriteCond %{THE_REQUEST} \s/([^.]+)\.php [NC]
+#  RewriteRule ^ /%1 [R=301,L]
+#  # Prevent directory listing
+#  Options -Indexes
+
+# # Redirect all requests from igoagritechfarms.com (with or without www) to Facebook page
+#  RewriteCond %{HTTP_HOST} ^(www\.)?igoagritechfarms\.com$ [NC]
+#  RewriteRule ^(.*)$ https://www.facebook.com/igoagritechfarms [R=302,L]
